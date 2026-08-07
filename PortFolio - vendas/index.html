@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Felipe | UI/UX Designer</title>
 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lucas Felipe — Portfólio">
+    <meta property="og:title" content="Lucas Felipe | UI/UX Designer">
+    <meta property="og:description" content="Experiências digitais que conectam pessoas e geram valor. Portfólio de projetos de UI/UX Design.">
+    <meta property="og:url" content="https://portfoliovenda.vercel.app">
+    <meta property="og:image" content="https://portfoliovenda.vercel.app/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,12 +124,32 @@
         <div class="container max-w-container mx-auto px-5 h-[84px] relative z-10 flex items-center justify-between">
             <a href="#inicio" class="font-heading font-bold text-3xl tracking-tighter text-brand-text">L<span class="text-brand-accent"></span>F</a>
 
-            <nav class="hidden md:flex items-center gap-8" aria-label="Navegação principal">
-                <a href="#inicio" data-nav-link="inicio" class="nav-link nav-link--active text-brand-text font-medium text-sm hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-brand-text after:rounded-full">Início</a>
-                <a href="#projetos" data-nav-link="projetos" class="nav-link text-brand-text hover:text-brand-text transition-colors text-sm">Projetos</a>
-                <a href="#experiencia" data-nav-link="experiencia" class="nav-link text-brand-text hover:text-brand-text transition-colors text-sm">Experiência</a>
-                <a href="#sobre" data-nav-link="sobre" class="nav-link text-brand-text hover:text-brand-text transition-colors text-sm">Sobre</a>
-                <a href="#contato" data-nav-link="contato" class="nav-link text-brand-text hover:text-brand-text transition-colors text-sm">Contato</a>
+            <nav id="expandable-nav-container" class="hidden md:flex" aria-label="Navegação principal">
+                <div
+                  id="expandable-nav"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-white/80 p-1.5 shadow-lg backdrop-blur-md transition-all dark:bg-zinc-950/80 dark:border-zinc-800"
+                >
+                  <a href="#inicio" data-nav-item="inicio" class="expandable-nav-item">
+                    <i data-lucide="home"></i>
+                    <span class="nav-item-label">INÍCIO</span>
+                  </a>
+                  <a href="#projetos" data-nav-item="projetos" class="expandable-nav-item">
+                    <i data-lucide="folder-kanban"></i>
+                    <span class="nav-item-label">PROJETOS</span>
+                  </a>
+                  <a href="#experiencia" data-nav-item="experiencia" class="expandable-nav-item">
+                    <i data-lucide="briefcase"></i>
+                    <span class="nav-item-label">EXPERIÊNCIA</span>
+                  </a>
+                  <a href="#sobre" data-nav-item="sobre" class="expandable-nav-item">
+                    <i data-lucide="user"></i>
+                    <span class="nav-item-label">SOBRE</span>
+                  </a>
+                   <a href="#contato" data-nav-item="contato" class="expandable-nav-item">
+                    <i data-lucide="mail"></i>
+                    <span class="nav-item-label">CONTATO</span>
+                  </a>
+                </div>
             </nav>
 
             <div class="hidden md:block">
@@ -132,7 +163,7 @@
             </button>
         </div>
 
-        <div id="mobile-nav" class="mobile-nav-panel md:hidden border-t border-white/10 bg-brand-accent/95 backdrop-blur-xl">
+        <div id="mobile-nav" class="mobile-nav-panel md:hidden border-t border-white/10 bg-brand-accentLigh/95 backdrop-blur-xl">
             <div class="px-5 py-5 flex flex-col gap-3">
                 <a href="#inicio" data-nav-link-mobile="inicio" class="mobile-nav-link">Início</a>
                 <a href="#projetos" data-nav-link-mobile="projetos" class="mobile-nav-link">Projetos</a>
@@ -141,7 +172,7 @@
                 <a href="#contato" data-nav-link-mobile="contato" class="mobile-nav-link">Contato</a>
 
                 <div class="pt-3">
-                    <a href="#contato" class="cartoon-button cartoon-button--dark shadow-soft w-full">
+                    <a href="https://wa.me/5532999552892?text=Vamos%20fazer%20um%20projeto%20juntos%20%21%21%21" class="cartoon-button cartoon-button--dark shadow-soft w-full">
                         <span class="relative z-10">Vamos conversar</span>
                         <i data-lucide="message-circle" class="relative z-10 w-5 h-5"></i>
                         <span class="cartoon-button__shine"></span>
@@ -195,7 +226,7 @@
                             aria-label="GitHub">
                             <img src="https://cdn.simpleicons.org/github/F7F6F1" alt="GitHub" class="w-5 h-5">
                         </a>
-                        <a href="https://wa.me/5532999552892?text=Vamos%20fazer%20um%20projeto%20juntos%20%21%21%21" target="_blank" rel="noopener"
+                        <a href="https://wa.me/5532999552892?text=Vamos%20fazer%20um%20projeto%20juntos%21" target="_blank" rel="noopener"
                             class="text-brand-textMuted hover:text-brand-text transition-colors p-2 bg-brand-surface rounded-full"
                             aria-label="WhatsApp">
                             <img src="https://cdn.simpleicons.org/whatsapp/F7F6F1" alt="WhatsApp" class="w-5 h-5">
@@ -501,7 +532,7 @@
                     </h2>
 
                     <div class="testimonial-stack" data-testimonial-stack>
-                        <a href="#sobre" target="_blank" rel="noopener noreferrer"
+                        <div
                             class="testimonial-stack__card is-back bg-white p-6 md:p-8 rounded-[28px] shadow-light-soft"
                             data-testimonial-card data-index="0">
                             <div class="testimonial-stack__ghost"></div>
@@ -528,9 +559,9 @@
                                 class="flex items-center justify-between text-xs md:text-sm text-brand-surface2 mt-auto">
                                 <span>3 jan 2026</span>
                             </div>
-                        </a>
+                        </div>
 
-                        <a href="#sobre" target="_blank" rel="noopener noreferrer"
+                        <div
                             class="testimonial-stack__card is-middle bg-white p-6 md:p-8 rounded-[28px] shadow-light-soft"
                             data-testimonial-card data-index="1">
                             <div class="testimonial-stack__ghost"></div>
@@ -557,7 +588,7 @@
                                 class="flex items-center justify-between text-xs md:text-sm text-brand-surface2 mt-auto">
                                 <span>2 jan 2026</span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1046,6 +1077,7 @@
             updateEnabled();
         })();
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
